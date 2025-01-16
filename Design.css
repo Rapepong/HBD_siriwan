@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(to right, rgba(209, 142, 247, 0.9), rgba(57, 255, 146, 0.9));
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+.Miku{
+
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease
+}
+span{
+    background: #ce04a2;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 2s;
+}
+button:hover{
+    transform:scale(1.1);
+}
+button:hover span{
+    width: 100%;
+}
+

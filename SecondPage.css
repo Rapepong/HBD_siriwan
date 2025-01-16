@@ -1,0 +1,112 @@
+html, body {
+    overflow: hidden; /* ปิดการเลื่อน */
+    height: 100%; /* ทำให้ครอบคลุมเต็มหน้าจอ */
+    background: linear-gradient(to bottom, #5aff6269, #ff96ff73);
+  }
+  
+button {
+    padding: 10px 25px;
+    margin: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;   
+}
+
+button:hover {
+    transform: scale(1.4); /* ขยายปุ่มให้ใหญ่ขึ้น */
+    background-color: #b92929; /* เปลี่ยนสีปุ่มเมื่อ hover */
+
+}
+
+button:hover span {
+    opacity: 0; /* ซ่อนข้อความเดิม */
+}
+
+button:hover::after {
+    padding-left: 12.5%;
+    content: "Are You Sure?"; /* ข้อความใหม่ */
+    position: absolute;
+    top: 50%;
+    left: 0; /* ติดริมซ้ายสุด */
+    transform: translateY(-50%); /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    font-size: 13px;
+    color: white;
+    text-align: left; /* จัดข้อความให้ชิดซ้าย (เสริมถ้ามีหลายบรรทัด) */
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    height: 90%;
+    overflow: hidden;
+}
+
+.scroll{
+    white-space: nowrap;
+    margin: 0 2 em;
+}
+
+.scroll div{
+    display: flex;
+    gap: 2em;
+}
+
+.scroll p{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0;
+    line-height: 10px;
+}
+
+.rightToleft{
+    animation: rightToleft 25s infinite linear;
+}
+
+@keyframes rightToleft{
+    from{
+        transform: translateX(350%);
+    }
+    to{
+        transform: translateX(-110%);
+    }
+}
+
+.leftToright{
+    animation: leftToright 25s infinite linear;
+}
+
+@keyframes leftToright{
+    from{
+        transform: translateX(-110%);
+    }
+    to{
+        transform: translateX(540%);
+    }
+}
+
+  
+body h1{
+    color: blue;
+    text-align: center;
+    font-weight: bolder;
+}
+
+body h2{
+    color: rgb(0, 102, 255);
+    text-align: center;
+    font-weight: lighter;
+}
+
+body img {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
